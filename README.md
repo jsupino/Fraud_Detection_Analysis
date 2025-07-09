@@ -13,7 +13,7 @@ This project focuses on analyzing and detecting fraudulent credit card transacti
 - PowerBI - building interactive dashboard and visualizations
 
 ## Dataset Generation ##
-A dataset of 1,000 randomized credit card transactions was created using Python and saved as *transaction_dataset.csv*. The dataset includes the following fields:
+A dataset of 1,000 randomized credit card transactions was created using a Python script, *transaction_dataset_creation.py*, and saved as *transaction_dataset.csv*. The dataset includes the following fields:
 - transaction_id (INT): Auto-incremented identifier
 - user_id (INT): Randomizer user reference
 - date (DATETIME): Random timestamp
