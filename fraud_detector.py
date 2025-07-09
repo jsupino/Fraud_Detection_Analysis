@@ -4,9 +4,8 @@ from datetime import time
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
-import joblib
 
-df = pd.read_csv("C:/Users/supin/Desktop/fraud_analysis/transactions_updated.csv")
+df = pd.read_csv("fraud_analysis/transactions_updated.csv")
 df['date'] = pd.to_datetime(df['date']) # Ensure datetime format
 df = df.sort_values(by=['user_id','date'])
 user_history = {}
