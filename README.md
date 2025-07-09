@@ -140,4 +140,4 @@ dashboard.pdf - Static PDF export of the PowerBI dashboard
 fraud_detector.py - Python script to predict whether a new transaction is likely fraudulent based on the learned patterns and rules
 
 ## Conclusion ##
-This project demonstrates how rule-based SQL detection and interactive dashboarding in Power BI can be used to identify and interpret suspicious activity in financial data. It serves as a foundation for future enhancements using machine learning, anomaly detection, or real-time fraud monitoring systems.'
+This project demonstrates how the combination of rule-based SQL detection, machine learning algorithns, and interactive visualizations can effectively identify and assess suspicious activity in financial transaction data. By integrating these approaches, detecting anomalies and potential fraud becomes more accurate and efficient. The dashboard further faciliates exploration and understanding of trends, enabling the ability to monitor fraudulent behavior patterns.
