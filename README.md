@@ -89,6 +89,14 @@ To view final dataset:
 
           SELECT * FROM transactions;
 
+## Machine Learning Fraud Detection ##
+This project implements a machine learning model to detect fraudulent credit card transactions using a Random Forest classifier trained on the labeled dataset, with a customizable decision threshold. This model is implemented in the *fraud_detector.py* script, which can assess new transactions and predict whether they are likely to be fraudulent.
+- Dataset contains the simulated credit card transactions
+- Categorical features are transformed using one-hot encoding
+- Model is trained to classify transactions as either fraudulent or legitimate based on the features
+- Performance is evaluated using a test set with standard metrics
+- An example new transaciton is evaluated using the trained model and adjustable threshold to demonstrate how fraud detection works on unseen data
+
 ## Analysis ##
 PowerBI was used to visualize and derive insights from the processed data:
 1. Donut Chart: Fraudulent vs. Legitimate Transactions
@@ -116,7 +124,7 @@ PowerBI was used to visualize and derive insights from the processed data:
 - 5+ transactions/hour/user
 - Suggests possible stolen card information or bots
 
-# Files Included ##
+## Files Included ##
 transaction_dataset_creation.py - Python script that generates transaction_dataset.csv
 
 transaction_dataset.csv - Synthetic dataset of credit card transactions created from the Python script
