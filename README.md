@@ -1,7 +1,16 @@
 ## Credit Card Fraud Detection & Analysis ##
 
 ## Overview ##
-This project simulates and analyzes credit card fraud using a randomized Python-generated dataset, SQL-based fraud detection rules, and PowerBI visualizations. It focuses on identifying anomalous patterns of fradulent activity in credit card transactions based on amount, time, and location.
+This project focuses on analyzing and detecting fraudulent credit card transactions using a Python-generated dataset, SQL-based detection rules, and Power BI visualizations. The goal is to identify anomalous patterns in transaction behavior based on factors such as amount, time, and location. In addition to the exploratory analysis and rule-based logic, I developed a Python script that evaluates new transactions and determines whether they are likely to be fraudulent.
+
+## Tools Used ##
+- Python - data generation and fraud detection
+    - Faker - to generate fake data
+    - random, csv, os, datetime - used for logic and file handling
+    - NumPy, Pandas - for data manipulation and analysis
+    - scikit-learn - for machine learning
+- SQL - for rule-based detection queries
+- PowerBI - building interactive dashboard and visualizations
 
 ## Dataset Generation ##
 A dataset of 1,000 randomized credit card transactions was created using Python and saved as *transaction_dataset.csv*. The dataset includes the following fields:
