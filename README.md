@@ -126,7 +126,8 @@ PowerBI was used to visualize and derive insights from the processed data:
 
 ## Files Included ##
 - transaction_dataset_creation.py
-    Python script that generates transaction_dataset.csv
+
+Python script that generates transaction_dataset.csv
 
 - transaction_dataset.csv
     Synthetic dataset of credit card transactions created from the Python script
