@@ -30,14 +30,13 @@ A dataset of 1,000 randomized credit card transactions was created using a Pytho
 Two additional columns were added to the *transactions* table:
     -  IsFraud (BOOLEAN): based on the following rules before
     - FraudReason (VARCHAR)
- 
-      ALTER TABLE transactions DROP COLUMN IsFraud;
-      ALTER TABLE transactions DROP COLUMN FraudReason;
-      ALTER TABLE transactions
-      ADD COLUMN IsFraud TINYINT DEFAULT 0;
-      ALTER TABLE transactions
-      ADD COLUMN FraudReason VARCHAR(255) DEFAULT "N/A";
 
+        ALTER TABLE transactions DROP COLUMN IsFraud;
+        ALTER TABLE transactions DROP COLUMN FraudReason;
+        ALTER TABLE transactions
+        ADD COLUMN IsFraud TINYINT DEFAULT 0;
+        ALTER TABLE transactions
+        ADD COLUMN FraudReason VARCHAR(255) DEFAULT "N/A";
 
 ## Fraud Detection Rules ##
 The following rules were applied to flag transactions as fraud:
