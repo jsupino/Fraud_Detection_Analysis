@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
 
-df = pd.read_csv("Desktop/fraud_analysis/transactions_updated.csv")
+df = pd.read_csv("fraud_analysis/transactions_updated.csv")
 df['date'] = pd.to_datetime(df['date']) # Ensure datetime format
 df = df.sort_values(by=['user_id','date'])
 
@@ -18,7 +18,9 @@ y = df['IsFraud']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Random Forest model
-model = RandomForestClassifier(n_estimators=100, random_state=42)
+model = RandomForestClassifier(n_estimators=100,
+                               class_weight='balanced',
+                               random_state=42)
 model.fit(X_train, y_train)
 
 # Evaluate model
@@ -30,13 +32,14 @@ print(classification_report(y_test, y_pred))
 # Example new transaction
 new_transaction1 = {
      'user_id': 120,
-     'date': '4/20/2025 4:30:40',
-     'amount': 20050.00,
+     'date': '4/20/2025 8:30:40',
+     'amount': 12000.00,
      'category': 'electronics',
      'location': 'Miami'
 }
 
-new_transaction1 = pd.get_dummies(new_transaction1, columns=['category', 'location'], drop_first=True) # one-hot encode
+new_transaction1 = pd.DataFrame([new_transaction1])
+new_transaction1 = pd.get_dummies(new_transaction1)
 
 # Align columns with the training data
 new_transaction1 = new_transaction1.reindex(columns=X_train.columns, fill_value=0) # fill missing columns with 0
