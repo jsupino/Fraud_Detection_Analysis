@@ -41,6 +41,7 @@ Run the Python script, *transaction_dataset_creation.py* to generate the inital 
 
 **Machine Learning Fraud Detection**
 Run the fraud detection model, labeled *fraud_detector.py*. This script will determine whether a new transaction is fraudulent.
+*Ensure to update file path*
 
 **PowerBI Dashboard**
 1. Open *PowerBI_dashboard* in PowerBI Desktop to epxlore the interactive fraud visualizations. Alternatively, view the static report in *dashboard.pdf*.
