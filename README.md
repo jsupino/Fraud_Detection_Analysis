@@ -33,12 +33,11 @@ Two additional columns were added to the *transactions* table:
  
       ALTER TABLE transactions DROP COLUMN IsFraud;
       ALTER TABLE transactions DROP COLUMN FraudReason;
-
       ALTER TABLE transactions
       ADD COLUMN IsFraud TINYINT DEFAULT 0;
-
       ALTER TABLE transactions
       ADD COLUMN FraudReason VARCHAR(255) DEFAULT "N/A";
+
 
 ## Fraud Detection Rules ##
 The following rules were applied to flag transactions as fraud:
