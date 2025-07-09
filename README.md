@@ -21,6 +21,31 @@ A dataset of 1,000 randomized credit card transactions was created using a Pytho
 - category (STR): Merchant category from a pre-defined list
 - location (STR): Random popular U.S. cities from a pre-defined list
 
+## How to Run ##
+**Prerequisites**
+- Python
+- MySQL (or other compatible environment)
+- PowerBI Desktop (optional)
+
+**Setup**
+1. Clone repository to your local machine
+2. Instal required Python packages
+
+**Dataset Generation**
+Run the Python script, *transaction_dataset_creation.py* to generate the inital dataset. This creates the *transaction_dataset.csv*.
+
+**SQL Data Import and Rule-Based Labeling**
+1. Create a schema labeled *fraud_detection*.
+2. Import *transaction_dataset.csv* into MySQL.
+3. Run the SQL queries from *fraud_rules.sql* to apply the fraud detection rules and update the dataset with fraud and fraud reasons
+
+**Machine Learning Fraud Detection**
+Run the fraud detection model, labeled *fraud_detector.py*. This script will determine whether a new transaction is fraudulent.
+
+**PowerBI Dashboard**
+1. Open *PowerBI_dashboard* in PowerBI Desktop to epxlore the interactive fraud visualizations. Alternatively, view the static report in *dashboard.pdf*.
+
+
 ## SQL Schema & Data Import ##
 - A schema named *fraud_detection* was created in MySQL workbench.
   
@@ -127,24 +152,30 @@ PowerBI was used to visualize and derive insights from the processed data:
 ## Files Included ##
 - transaction_dataset_creation.py
 
-Python script that generates transaction_dataset.csv
+    Python script that generates transaction_dataset.csv
 
 - transaction_dataset.csv
+
     Synthetic dataset of credit card transactions created from the Python script
 
 - transactions_updated.csv
+
     Updated transaction dataset including fraud labels and reasons based on SQL rules
 
 - fraud_rules.sql
+
     SQL script containing the rule-based queries used to detect potentially fraudulent transactions
 
 - PowerBI_dashboard
+
     Interactive PowerBI dashboard visualilzing fraud trends and analytics
 
 - dashboard.pdf
+
     Static PDF export of the PowerBI dashboard
 
 - fraud_detector.py
+
     Python script to predict whether a new transaction is likely fraudulent based on the learned patterns and rules
 
 ## Conclusion ##
