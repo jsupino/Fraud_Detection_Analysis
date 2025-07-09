@@ -117,15 +117,19 @@ PowerBI was used to visualize and derive insights from the processed data:
 - Suggests possible stolen card information or bots
 
 # Files Included ##
-transaction_dataset_creation.py - Python script to create transaction_dataset.csv
+transaction_dataset_creation.py - Python script that generates transaction_dataset.csv
 
-transaction_dataset.csv - Simulated credit card transaction dataset from the Python script
+transaction_dataset.csv - Synthetic dataset of credit card transactions created from the Python script
 
-transactions_updated.csv - updated transaction dataset with the fraud labels and reasons
+transactions_updated.csv - Updated transaction dataset including fraud labels and reasons based on SQL rules
 
-fraud_dashboard: PowerBI dashboard
+fraud_rules.sql - SQL script containing the rule-based queries used to detect potentionally fraudulent transactions
 
-fraud_dashboard.pdf - PowerBI dashboard as a PDF
+PowerBI_dashboard: interactive PowerBI dashboard visualiIng fraud trends and analytics
+
+dashboard.pdf - Static PDF export of the PowerBI dashboard
+
+fraud_detector.py - Python script to predict whether a new transaction is likely fraudulent based on the learned patterns and rules
 
 ## Conclusion ##
 This project demonstrates how rule-based SQL detection and interactive dashboarding in Power BI can be used to identify and interpret suspicious activity in financial data. It serves as a foundation for future enhancements using machine learning, anomaly detection, or real-time fraud monitoring systems.'
